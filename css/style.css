@@ -3,7 +3,7 @@
 /* Global VAriables */
 :root{
     --primary-color : #fff;
-    --secondary-color : #555;
+    --secondary-color : #000;
 }
 
 h2,h3,h4,p{
@@ -319,7 +319,7 @@ a{
 /* Contact form styles */
 .contact{
     text-align: center;
-    background-color: #555;
+    background-color:var(--secondary-color) ;
     color: #fff;
     padding-bottom: 3em;
 }
@@ -368,7 +368,7 @@ form input,textarea{
 
 /* Footer area */
 #footer{
-    background-color: #000;
+    background-color: #555;
     color: #fff;
     height: 10vh;
     padding: 1.5em;
