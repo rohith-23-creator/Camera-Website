@@ -8,4 +8,4 @@ Camify is a responsive website for a fictional camera company.
 
 # Final Output 
 
-![](mobile-view.png)
+![](camera-view.png)
