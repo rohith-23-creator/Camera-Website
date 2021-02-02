@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700&display=swap');
+
+/* Global VAriables */
+:root{
+    --primary-color : #fff;
+    --secondary-color : #555;
+}
+
+h2,h3,h4,p{
+    color: var(--secondary-color);
+}
+
+/* General Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.2em;
+}
+
+body{
+    font-family: 'Catamaran',sans-serif;
+    overflow-x: hidden;
+    -ms-touch-action: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.head{
+    height: 80px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2em;
+}
+
+.nav-bar{
+    justify-self: flex-end;
+}
+
+.nav-items{
+    display: flex;
+    padding: 0 1em;
+    color: var(--secondary-color);
+}
+
+.nav-link{
+    list-style-type: none;
+    
+}
+
+.nav-link a{
+    padding: 0 1em;
+    text-decoration: none;
+    color : var(--secondary-color);
+    cursor: pointer;
+
+}
+
+/* Navbar Media Queries */
+@media(max-width:500px){
+    .nav-items{
+        display: none;
+    }
+
+    .head{
+        text-align: center;
+    }
+}
+
+
+/* Showcase area styles */
+.showcase .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.showcase h1{
+    font-size: 3.5em;
+    padding-bottom: .5em;
+}
+
+.showcase p{
+    padding-bottom: 2.5em;
+}
+
+.showcase-img img{
+    width: 500px;
+    height: 500px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.btn{
+    background-color: var(--secondary-color);
+    padding: .7em ;
+    border-radius: 30px;
+}
+
+/* Showcase Area MediaQueries */
+@media(max-width:1020px){
+    .showcase .container{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+        padding-top: 3em;
+    }
+
+    .showcase .container div:first-child{
+        order: 2;
+    }
+
+    .showcase .container div:first-child{
+        order: 1;
+    }
+    
+    .showcase-img{
+        margin-top: -100px;
+    }
+}
+
+
+@media(max-width:500px){
+
+    .showcase{
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .showcase-img img{
+        width: 350px;
+    }
+
+    .showcase-text h1{
+        font-size: 2em;
+    }
+}
+
+/* Models Area Styles */
+.models{
+    margin-top: 3em;
+}
+
+.models .container{
+    text-align: center;
+}
+
+
+.models h1{
+    font-size: 3em;
+    padding-top: 1em;
+    padding-bottom: .3em;
+}
+
+.models p{
+    padding-bottom: 1em;
+}
+
+.models img{
+    width: 300px;
+    height: 300px;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+
+.card1,.card2,.card3{
+    box-shadow: 3px 3px 12px #ccc;
+    margin: 3em 0;
+
+}
+
+.cards-container{
+    margin-bottom: 4em;
+}
+
+.cards-container a.btn{
+    display: inline-block;
+    margin-bottom: 1em;
+
+}
+
+.cards-container h3{
+    font-size: 1.5em;
+    padding-bottom: 1.5em;
+    margin-top: -1em;
+}
+
+/* Models area MediaQueries */
+@media(max-width:980px){
+    .cards-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .card1,.card2,.card3{
+        background-color: #fff;
+        margin: 1em auto;
+        width: 300px;
+    }
+    
+}
+
+@media(max-width:500px){
+  .models h1{
+      font-size: 2em;
+  }
+
+   .cards-container h3{
+      font-size: 1.5em;
+  }
+   
+  .card1, .card2 ,.card3 .btn{
+      font-size: .7em;
+  }
+}
+
+/* Parallax Section styles */
+#parallax {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../img/parallax-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;background-attachment: fixed;
+}
+
+.parallax .parallax-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-content h1{
+    color: #fff;
+    font-size: 3em;
+    padding: 1em 3em;
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #000;
+    padding: 1em ;
+    border-radius: 30px;
+}
+
+/* Parallax area MediaQueries */
+@media(max-width :720px){
+    .parallax-content h1{
+        font-size: 2em;
+        padding: 1em 3em;
+    }
+    
+}
+
+@media(max-width :450px){
+    .parallax-content h1{
+        font-size: 2em;
+        padding: 1em 1em;
+    }
+
+    .btn-white{
+        padding: .8em ;
+        font-size: 12px;
+    }
+}
+
+/* Gallery area */
+
+.gallery-container img{
+    max-width:210px;
+    height: 250px;
+}
+
+.gallery{
+    max-width: 1100px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.75em;
+}
+
+.gallery h1{
+    padding-top: 1em;
+    font-size: 3em;
+}
+
+.gallery p{
+    padding-bottom: 2em;
+}
+
+/* Gallery area MediaQueries */
+@media(max-width:500px){
+    .gallery h1{
+        font-size: 2em;
+    }
+}
+
+/* Contact form styles */
+.contact{
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    padding-bottom: 3em;
+}
+
+.contact h1{
+    padding-top: 2em ;
+    padding-bottom: 1em;
+    font-size: 3em;
+}
+
+.contact .container{
+    max-width: 500px;
+    margin: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-family: "Catamaran";
+    background-color: #fff;
+}
+
+form input,textarea{
+    padding: 1em 0;
+    width: 80%;
+    margin: 2em auto;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #555;
+}
+
+.contact .btn{
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+/* Form MediaQueries */
+@media(max-width:450px){
+    .contact h1{
+        font-size: 2em;
+    }
+}
+
+
+/* Footer area */
+#footer{
+    background-color: #000;
+    color: #fff;
+    height: 10vh;
+    padding: 1.5em;
+    text-align: center;
+}
