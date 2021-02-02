@@ -5,3 +5,7 @@ Camify is a responsive website for a fictional camera company.
 1.Lightbox for image gallery
 
 2.Responsive.
+
+# Final Output 
+
+![](mobile-view.png)
